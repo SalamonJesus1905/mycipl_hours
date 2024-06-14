@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Email</title>
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(lightpink,lightblue);
+        }
+
+        .password-form {
+            width: 400px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            border: 1px solid rgb(136, 111, 139);
+            text-shadow: 1px lightgray;
+        }
+
+        form {
+            color: rgb(138, 43, 226);
+        }
+
+        #rset-btn {
+            color: rgb(138, 43, 226);
+            background: rgb(214, 205, 212);
+            border: 1px solid rgb(136, 111, 139);
+            height: 25px;
+            border-radius: 5px;
+        }
+        input{
+            width: 200px;
+            height: 20px;
+            border: 1px solid rgba(225, 159, 228, 0.171);
+            border-radius: 5px;
+            /* background: linear-gradient(lightpink,lightblue); */
+        }
+        h3{
+            color: rgb(138, 43, 226);
+        }
+    </style>
+    <div class="container">
+        <h3>Password Reset</h3>
+        <div class="email-container">
+            <div class="password-form">
+                <form action="./reset" id="forget-password" method="post">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="Email">Email</label>
+                            </td>
+                            <td>
+                                <input type="text" name="email" id="email" placeholder="enter email" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password">New Password</label>
+                            </td>
+                            <td>
+                                <input type="text" name="password" placeholder="enter password" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="confirm-password">Confirm Password</label>
+                            </td>
+                            <td>
+                                <input type="text" name="confirmPassword" placeholder="confirm-password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="submit" id="rset-btn">submit</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

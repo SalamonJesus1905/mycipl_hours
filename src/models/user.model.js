@@ -3,6 +3,12 @@ import bcrypt from "bcrypt";
 import validator from "validator";
 
 const userSchema = mongoose.Schema({
+    fullName:{
+        type: String,
+        required: true,
+        trim: true,
+        minlength: 3,
+    },
     email : {
         type : String,
         required : true,
@@ -12,6 +18,12 @@ const userSchema = mongoose.Schema({
                 throw new Error('Email is invalid')
             }
         }
+    },
+    role:{
+            type: String,
+            enum : ['ADMIN','USER'],
+            default: 'USER',
+            required : true,
     },
     password : {
         type: String,
